@@ -1,0 +1,9 @@
+{
+	"name": "adf-metadata-1801",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "26d18961-2a5b-4e5d-8887-c96bc90a9371",
+		"tenantId": "36da45f1-dd2c-4d1f-af13-5abe46b99921"
+	}
+}

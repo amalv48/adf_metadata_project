@@ -1,0 +1,47 @@
+{
+	"name": "ds_abls_buyalot_file_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_buyalot_webstore",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"container": {
+				"type": "string",
+				"defaultValue": "finance"
+			},
+			"fileName": {
+				"type": "string",
+				"defaultValue": "finance.csv"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().fileName",
+					"type": "Expression"
+				},
+				"container": {
+					"value": "@dataset().container",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

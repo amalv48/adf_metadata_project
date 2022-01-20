@@ -1,0 +1,20 @@
+{
+	"name": "ds_asql_batch_details",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_asql_dataengineering_metadata",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "metadata"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "BatchRun"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,13 @@
+{
+	"name": "ls_blob_buyalot_webstore",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Connection to Buyalot website data",
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=blobwebstore1801;EndpointSuffix=core.windows.net;",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDM1RkYzN0Y5LTRGMjMtNEZBMi1CQUYzLTlBMDk0ODEyRjI1NV81ZTZjY2E3NC1hN2JkLTQ5ZDMtYmJjZi0xODA1NGIxMjliZDciDQp9"
+		}
+	}
+}
