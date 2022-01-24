@@ -18,7 +18,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT * FROM [dbo].[EmailRecipients]\nWHERE SystemCode = pipeline().parameters.systemCode AND DatasetName = pipeline().parameters.datasetName",
+							"value": "SELECT [SystemCode]\n      ,[DatasetName]\n      ,[SystemInfoID]\n      ,[FirstName]\n      ,[LastName]\n      ,[EmailAddress] \nFROM [dbo].[EmailRecipients]\nWHERE SystemCode = 'pipeline().parameters.systemCode'",
 							"type": "Expression"
 						},
 						"queryTimeout": "00:10:00",
@@ -27,7 +27,8 @@
 					"dataset": {
 						"referenceName": "ds_asql_emailaddresses",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
