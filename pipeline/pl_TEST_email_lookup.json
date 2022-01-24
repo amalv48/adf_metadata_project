@@ -43,6 +43,12 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "ForEach1 Email Address",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": []
 			}
 		],
 		"parameters": {
