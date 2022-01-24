@@ -79,7 +79,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"url": "https://prod-00.australiaeast.logic.azure.com:443/workflows/563290d294d941ffa49c1198040f2453/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=jrGVjOkb1hYJAgaLyZNmqRrNvdpIuAwCE2nztF5nkEA",
+								"url": "https://prod-15.australiaeast.logic.azure.com:443/workflows/be40628b41414a07bfdab16045294320/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=O6pX40CqrR6-nSlAFI9vyC-OxCaiFwC-fuDcVASjs2g",
 								"method": "POST",
 								"headers": {
 									"Content-Type": "application/json"
