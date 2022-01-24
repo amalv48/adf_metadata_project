@@ -43,25 +43,6 @@
 					},
 					"firstRowOnly": false
 				}
-			},
-			{
-				"name": "ForEach send Email",
-				"type": "ForEach",
-				"dependsOn": [
-					{
-						"activity": "Get email addresses TEST",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"items": {
-						"value": "@activity('Get email addresses TEST').output.value",
-						"type": "Expression"
-					}
-				}
 			}
 		],
 		"parameters": {
