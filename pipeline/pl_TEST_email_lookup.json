@@ -17,9 +17,22 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": {
-							"value": "SELECT [SystemCode]\n      ,[DatasetName]\n      ,[SystemInfoID]\n      ,[FirstName]\n      ,[LastName]\n      ,[EmailAddress] \nFROM [dbo].[EmailRecipients]\nWHERE SystemCode = 'pipeline().parameters.systemCode'",
-							"type": "Expression"
+						"sqlReaderStoredProcedureName": "[dbo].[GetEmailAddresses]",
+						"storedProcedureParameters": {
+							"DatasetName": {
+								"type": "String",
+								"value": {
+									"value": "@pipeline().parameters.datasetName",
+									"type": "Expression"
+								}
+							},
+							"SystemCode": {
+								"type": "String",
+								"value": {
+									"value": "@pipeline().parameters.systemCode",
+									"type": "Expression"
+								}
+							}
 						},
 						"queryTimeout": "00:10:00",
 						"partitionOption": "None"
@@ -30,6 +43,25 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "ForEach send Email",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Get email addresses TEST",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get email addresses TEST').output.value",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
@@ -39,16 +71,6 @@
 			},
 			"datasetName": {
 				"type": "string",
-				"defaultValue": "Sales"
-			}
-		},
-		"variables": {
-			"systemCode": {
-				"type": "String",
-				"defaultValue": "OWS"
-			},
-			"datasetName": {
-				"type": "String",
 				"defaultValue": "Sales"
 			}
 		},
