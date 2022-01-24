@@ -53,7 +53,7 @@
 				]
 			},
 			{
-				"name": "Send Email Notif TEST",
+				"name": "Execute Send Email Pipeline TEST",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{

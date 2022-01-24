@@ -85,7 +85,7 @@
 									"Content-Type": "application/json"
 								},
 								"body": {
-									"value": "@json(concat('{\n\"emailAddress\": \"',item().EmailAddress,'\",\n\"subject\": \"',pipeline().parameters.subject,'\",\n\"messageBody\": \"',pipeline().parameters.message,'\"\n}'))",
+									"value": "@json(concat('{\n\"emailAddress\": \"',item().EmailAddress,'\",\n\"subject\": \"TEST INGESTION\",\n\"messageBody\": \"MESSAGE BODUY GOES HERE\"\n}'))",
 									"type": "Expression"
 								}
 							}
