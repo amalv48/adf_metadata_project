@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfmetada012022"
+		},
+		"ls_adls_data_engineering_dl_accountKey": {
+			"value": ""
+		},
+		"ls_asql_dataengineering_metadata_connectionString": {
+			"value": ""
+		},
+		"ls_blob_buyalot_webstore_connectionString": {
+			"value": ""
+		},
+		"ls_adls_data_engineering_dl_properties_typeProperties_url": {
+			"value": "https://adlsmetadata012022.dfs.core.windows.net"
+		},
+		"trg_ingest_uploaded_files_properties_typeProperties_scope": {
+			"value": "/subscriptions/dd32bb1e-bacf-446c-a8f1-3844234c3083/resourceGroups/adf_udemy_metadata_ingestion/providers/Microsoft.Storage/storageAccounts/blobwebstore1801"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
