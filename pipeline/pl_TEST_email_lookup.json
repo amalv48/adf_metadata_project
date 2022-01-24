@@ -42,6 +42,16 @@
 				"defaultValue": "Sales"
 			}
 		},
+		"variables": {
+			"systemCode": {
+				"type": "String",
+				"defaultValue": "OWS"
+			},
+			"datasetName": {
+				"type": "String",
+				"defaultValue": "Sales"
+			}
+		},
 		"folder": {
 			"name": "utility"
 		},
